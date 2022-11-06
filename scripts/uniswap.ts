@@ -1,14 +1,21 @@
 import { ethers } from 'ethers'
-import { Pool } from '@uniswap/v3-sdk'
+import { FACTORY_ADDRESS, Pool } from '@uniswap/v3-sdk'
 import { Token } from '@uniswap/sdk-core'
 import { abi as IUniswapv3PoolABI } from '@uniswap/v3-core/artifacts/contracts/interfaces/IUniswapV3Pool.sol/IUniswapV3Pool.json'
+import { abi as IUniswapV3Factory } from '@uniswap/v3-core/artifacts/contracts/interfaces/IUniswapV3Factory.sol/IUniswapV3Factory.json'
 import dotenv from 'dotenv'
 
 dotenv.config()
 
 const provider = new ethers.providers.JsonRpcProvider(process.env.ETHEREUM_NODE_URL)
+
 const poolAddress = '0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8' // USDC over WETH
 const poolContract = new ethers.Contract(poolAddress, IUniswapv3PoolABI, provider)
+
+const daiAddress = '0x6b175474e89094c44da98b954eedeac495271d0f'
+const usdcAddress = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
+const wethAddress = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
+const factoryContract = new ethers.Contract(FACTORY_ADDRESS, IUniswapV3Factory, provider)
 
 interface Immutables {
     factory: string
@@ -99,6 +106,16 @@ async function main() {
     // token1 significant price is 1617.69
     // if I want 1 of token1(WETH), I need 1617.69 of token0(USDC)
     console.log(token1Price.toSignificant(6))
+
+    const poolDAIUSDC = await factoryContract.getPool(
+        daiAddress,
+        usdcAddress,
+        3000
+    )
+
+    // 0xa63b490aA077f541c9d64bFc1Cc0db2a752157b5 DAI, USDC
+    // 0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8 USDC, WETH (matches above)
+    console.log(poolDAIUSDC)
 }
 
 main()
