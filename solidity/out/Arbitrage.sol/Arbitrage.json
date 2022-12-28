@@ -1,0 +1,2838 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee1",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee2",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee3",
+              "type": "uint24"
+            }
+          ],
+          "internalType": "struct Arbitrage.FlashParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "initFlash",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "swap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "fee0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "fee1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "uniswapV3FlashCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b506107f3806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80632384463b146100465780638119c0651461005b578063e9cbafb014610063575b600080fd5b61005961005436600461055d565b610076565b005b6100596101b9565b61005961007136600461060d565b6102b6565b6000604051806060016040528083600001516001600160a01b0316815260200183602001516001600160a01b03168152602001836040015162ffffff16815250905060006100d8731f98431c8ad98523631ae4a59f267346ea31f9848361039d565b9050806001600160a01b031663490e6cbc30856060015186608001516040518060c001604052808960600151815260200189608001518152602001336001600160a01b031681526020018881526020018960a0015162ffffff1681526020018960c0015162ffffff16815250604051602001610154919061068d565b6040516020818303038152906040526040518563ffffffff1660e01b81526004016101829493929190610753565b600060405180830381600087803b15801561019c57600080fd5b505af11580156101b0573d6000803e3d6000fd5b50505050505050565b6040805160e081018252736b175474e89094c44da98b954eedeac495271d0f815273a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48602082019081526101f4828401818152600a606085018181526080860191825260a08601938452600060c087019081529651632384463b60e01b815286516001600160a01b03908116600483015295519095166024860152915162ffffff9081166044860152915160648501525160848401529051811660a4830152925190921660c4830152903090632384463b9060e401600060405180830381600087803b15801561029b57600080fd5b505af11580156102af573d6000803e3d6000fd5b5050505050565b6102df6040518060400160405280600881526020016763616c6c6261636b60c01b815250610486565b6040516370a0823160e01b815230600482015261035c90736b175474e89094c44da98b954eedeac495271d0f906370a08231906024015b602060405180830381865afa158015610333573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610357919061078a565b6104cc565b6040516370a0823160e01b81523060048201526103979073a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48906370a0823190602401610316565b50505050565b600081602001516001600160a01b031682600001516001600160a01b0316106103c557600080fd5b815160208084015160408086015181516001600160a01b0395861681860152949092168482015262ffffff90911660608085019190915281518085038201815260808501909252815191909201206001600160f81b031960a08401529085901b6bffffffffffffffffffffffff191660a183015260b58201527fe34f199b19b2b4f47f68442619d555527d244f78a3297ea89325f843f87b8b5460d582015260f50160408051601f1981840301815291905280516020909101209392505050565b6104c98160405160240161049a91906107a3565b60408051601f198184030181529190526020810180516001600160e01b031663104c13eb60e21b17905261050d565b50565b6104c9816040516024016104e291815260200190565b60408051601f198184030181529190526020810180516001600160e01b031663f5b1bba960e01b1790525b80516a636f6e736f6c652e6c6f67602083016000808483855afa5050505050565b80356001600160a01b038116811461054557600080fd5b919050565b803562ffffff8116811461054557600080fd5b600060e0828403121561056f57600080fd5b60405160e0810181811067ffffffffffffffff821117156105a057634e487b7160e01b600052604160045260246000fd5b6040526105ac8361052e565b81526105ba6020840161052e565b60208201526105cb6040840161054a565b604082015260608301356060820152608083013560808201526105f060a0840161054a565b60a082015261060160c0840161054a565b60c08201529392505050565b6000806000806060858703121561062357600080fd5b8435935060208501359250604085013567ffffffffffffffff8082111561064957600080fd5b818701915087601f83011261065d57600080fd5b81358181111561066c57600080fd5b88602082850101111561067e57600080fd5b95989497505060200194505050565b81518152602080830151818301526040808401516001600160a01b03908116828501526060808601518051831691860191909152928301511660808085019190915291015162ffffff1660a08301528201516101008201906106f660c084018262ffffff169052565b5060a0929092015162ffffff1660e0919091015290565b6000815180845260005b8181101561073357602081850181015186830182015201610717565b506000602082860101526020601f19601f83011685010191505092915050565b60018060a01b0385168152836020820152826040820152608060608201526000610780608083018461070d565b9695505050505050565b60006020828403121561079c57600080fd5b5051919050565b6020815260006107b6602083018461070d565b939250505056fea26469706673582212202c1d864f79b35e55b424fc6861ff793e643d7e3b337967d8c2dc70a42f506dd164736f6c63430008110033",
+    "sourceMap": "503:2916:25:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80632384463b146100465780638119c0651461005b578063e9cbafb014610063575b600080fd5b61005961005436600461055d565b610076565b005b6100596101b9565b61005961007136600461060d565b6102b6565b6000604051806060016040528083600001516001600160a01b0316815260200183602001516001600160a01b03168152602001836040015162ffffff16815250905060006100d8731f98431c8ad98523631ae4a59f267346ea31f9848361039d565b9050806001600160a01b031663490e6cbc30856060015186608001516040518060c001604052808960600151815260200189608001518152602001336001600160a01b031681526020018881526020018960a0015162ffffff1681526020018960c0015162ffffff16815250604051602001610154919061068d565b6040516020818303038152906040526040518563ffffffff1660e01b81526004016101829493929190610753565b600060405180830381600087803b15801561019c57600080fd5b505af11580156101b0573d6000803e3d6000fd5b50505050505050565b6040805160e081018252736b175474e89094c44da98b954eedeac495271d0f815273a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48602082019081526101f4828401818152600a606085018181526080860191825260a08601938452600060c087019081529651632384463b60e01b815286516001600160a01b03908116600483015295519095166024860152915162ffffff9081166044860152915160648501525160848401529051811660a4830152925190921660c4830152903090632384463b9060e401600060405180830381600087803b15801561029b57600080fd5b505af11580156102af573d6000803e3d6000fd5b5050505050565b6102df6040518060400160405280600881526020016763616c6c6261636b60c01b815250610486565b6040516370a0823160e01b815230600482015261035c90736b175474e89094c44da98b954eedeac495271d0f906370a08231906024015b602060405180830381865afa158015610333573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610357919061078a565b6104cc565b6040516370a0823160e01b81523060048201526103979073a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48906370a0823190602401610316565b50505050565b600081602001516001600160a01b031682600001516001600160a01b0316106103c557600080fd5b815160208084015160408086015181516001600160a01b0395861681860152949092168482015262ffffff90911660608085019190915281518085038201815260808501909252815191909201206001600160f81b031960a08401529085901b6bffffffffffffffffffffffff191660a183015260b58201527fe34f199b19b2b4f47f68442619d555527d244f78a3297ea89325f843f87b8b5460d582015260f50160408051601f1981840301815291905280516020909101209392505050565b6104c98160405160240161049a91906107a3565b60408051601f198184030181529190526020810180516001600160e01b031663104c13eb60e21b17905261050d565b50565b6104c9816040516024016104e291815260200190565b60408051601f198184030181529190526020810180516001600160e01b031663f5b1bba960e01b1790525b80516a636f6e736f6c652e6c6f67602083016000808483855afa5050505050565b80356001600160a01b038116811461054557600080fd5b919050565b803562ffffff8116811461054557600080fd5b600060e0828403121561056f57600080fd5b60405160e0810181811067ffffffffffffffff821117156105a057634e487b7160e01b600052604160045260246000fd5b6040526105ac8361052e565b81526105ba6020840161052e565b60208201526105cb6040840161054a565b604082015260608301356060820152608083013560808201526105f060a0840161054a565b60a082015261060160c0840161054a565b60c08201529392505050565b6000806000806060858703121561062357600080fd5b8435935060208501359250604085013567ffffffffffffffff8082111561064957600080fd5b818701915087601f83011261065d57600080fd5b81358181111561066c57600080fd5b88602082850101111561067e57600080fd5b95989497505060200194505050565b81518152602080830151818301526040808401516001600160a01b03908116828501526060808601518051831691860191909152928301511660808085019190915291015162ffffff1660a08301528201516101008201906106f660c084018262ffffff169052565b5060a0929092015162ffffff1660e0919091015290565b6000815180845260005b8181101561073357602081850181015186830182015201610717565b506000602082860101526020601f19601f83011685010191505092915050565b60018060a01b0385168152836020820152826040820152608060608201526000610780608083018461070d565b9695505050505050565b60006020828403121561079c57600080fd5b5051919050565b6020815260006107b6602083018461070d565b939250505056fea26469706673582212202c1d864f79b35e55b424fc6861ff793e643d7e3b337967d8c2dc70a42f506dd164736f6c63430008110033",
+    "sourceMap": "503:2916:25:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2393:1023;;;;;;:::i;:::-;;:::i;:::-;;556:293;;;:::i;1550:289::-;;;;;;:::i;:::-;;:::i;2393:1023::-;2458:34;2507:85;;;;;;;;2536:6;:13;;;-1:-1:-1;;;;;2507:85:25;;;;;2559:6;:13;;;-1:-1:-1;;;;;2507:85:25;;;;;2579:6;:11;;;2507:85;;;;;2458:134;;2602:19;2639:53;458:42;2684:7;2639:26;:53::i;:::-;2602:91;;2960:4;-1:-1:-1;;;;;2960:10:25;;2992:4;3011:6;:14;;;3039:6;:14;;;3095:290;;;;;;;;3144:6;:14;;;3095:290;;;;3189:6;:14;;;3095:290;;;;3232:10;-1:-1:-1;;;;;3095:290:25;;;;;3273:7;3095:290;;;;3312:6;:11;;;3095:290;;;;;;3355:6;:11;;;3095:290;;;;;3067:332;;;;;;;;:::i;:::-;;;;;;;;;;;;;2960:449;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2448:968;;2393:1023;:::o;556:293::-;619:191;;;;;;;;225:42:26;619:191:25;;360:42:26;619:191:25;;;;;;702:3;619:191;;;;;;728:2;619:191;;;;;;;;;;;;;;;;;;-1:-1:-1;619:191:25;;;;;;820:22;;-1:-1:-1;;;820:22:25;;4320:13:28;;-1:-1:-1;;;;;4316:22:28;;;820::25;;;4298:41:28;4381:24;;4377:33;;;4355:20;;;4348:63;4440:24;;4483:8;4529:21;;;4507:20;;;4500:51;4589:24;;4567:20;;;4560:54;4652:24;4630:20;;;4623:54;4719:24;;4715:33;;4693:20;;;4686:63;4791:24;;4787:33;;;4765:20;;;4758:63;619:191:25;820:4;;:14;;4232:19:28;;820:22:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;581:268;556:293::o;1550:289::-;1689:23;;;;;;;;;;;;;;-1:-1:-1;;;1689:23:25;;;:11;:23::i;:::-;1735:36;;-1:-1:-1;;;1735:36:25;;1765:4;1735:36;;;4978:51:28;1723:49:25;;225:42:26;;1735:21:25;;4951:18:28;;1735:36:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1723:11;:49::i;:::-;1794:37;;-1:-1:-1;;;1794:37:25;;1825:4;1794:37;;;4978:51:28;1782:50:25;;360:42:26;;1794:22:25;;4951:18:28;;1794:37:25;4832:203:28;1782:50:25;1550:289;;;;:::o;1305:635:24:-;1389:12;1434:3;:10;;;-1:-1:-1;;;;;1421:23:24;:3;:10;;;-1:-1:-1;;;;;1421:23:24;;1413:32;;;;;;1741:10;;1753;;;;;1765:7;;;;;1730:43;;-1:-1:-1;;;;;5485:15:28;;;1730:43:24;;;5467:34:28;5537:15;;;;5517:18;;;5510:43;5601:8;5589:21;;;5569:18;;;;5562:49;;;;1730:43:24;;;;;;;;;5402:18:28;;;1730:43:24;;;1720:54;;;;;;;-1:-1:-1;;;;;;1588:269:24;;;5908:26:28;5967:15;;;;-1:-1:-1;;5963:53:28;5950:11;;;5943:74;6033:12;;;6026:28;241:66:24;6070:12:28;;;6063:28;6107:12;;1588:269:24;;;-1:-1:-1;;1588:269:24;;;;;;;;;1549:334;;1588:269;1549:334;;;;;1305:635;-1:-1:-1;;;1305:635:24:o;5630:121:12:-;5685:59;5740:2;5701:42;;;;;;;;:::i;:::-;;;;-1:-1:-1;;5701:42:12;;;;;;;;;;;;;;-1:-1:-1;;;;;5701:42:12;-1:-1:-1;;;5701:42:12;;;5685:15;:59::i;:::-;5630:121;:::o;5514:110::-;5560:57;5613:2;5576:40;;;;;;6500:25:28;;6488:2;6473:18;;6354:177;5576:40:12;;;;-1:-1:-1;;5576:40:12;;;;;;;;;;;;;;-1:-1:-1;;;;;5576:40:12;-1:-1:-1;;;5576:40:12;;;181:376;275:14;;131:42;448:2;435:16;;251:21;;275:14;435:16;131:42;484:5;473:68;464:77;;401:150;;181:376;:::o;14:173:28:-;82:20;;-1:-1:-1;;;;;131:31:28;;121:42;;111:70;;177:1;174;167:12;111:70;14:173;;;:::o;192:161::-;259:20;;319:8;308:20;;298:31;;288:59;;343:1;340;333:12;358:971;447:6;500:3;488:9;479:7;475:23;471:33;468:53;;;517:1;514;507:12;468:53;550:2;544:9;592:3;584:6;580:16;662:6;650:10;647:22;626:18;614:10;611:34;608:62;605:185;;;712:10;707:3;703:20;700:1;693:31;747:4;744:1;737:15;775:4;772:1;765:15;605:185;806:2;799:22;845:29;864:9;845:29;:::i;:::-;837:6;830:45;908:38;942:2;931:9;927:18;908:38;:::i;:::-;903:2;895:6;891:15;884:63;980:37;1013:2;1002:9;998:18;980:37;:::i;:::-;975:2;967:6;963:15;956:62;1079:2;1068:9;1064:18;1051:32;1046:2;1038:6;1034:15;1027:57;1146:3;1135:9;1131:19;1118:33;1112:3;1104:6;1100:16;1093:59;1186:38;1219:3;1208:9;1204:19;1186:38;:::i;:::-;1180:3;1172:6;1168:16;1161:64;1259:38;1292:3;1281:9;1277:19;1259:38;:::i;:::-;1253:3;1241:16;;1234:64;1245:6;358:971;-1:-1:-1;;;358:971:28:o;1334:727::-;1422:6;1430;1438;1446;1499:2;1487:9;1478:7;1474:23;1470:32;1467:52;;;1515:1;1512;1505:12;1467:52;1551:9;1538:23;1528:33;;1608:2;1597:9;1593:18;1580:32;1570:42;;1663:2;1652:9;1648:18;1635:32;1686:18;1727:2;1719:6;1716:14;1713:34;;;1743:1;1740;1733:12;1713:34;1781:6;1770:9;1766:22;1756:32;;1826:7;1819:4;1815:2;1811:13;1807:27;1797:55;;1848:1;1845;1838:12;1797:55;1888:2;1875:16;1914:2;1906:6;1903:14;1900:34;;;1930:1;1927;1920:12;1900:34;1975:7;1970:2;1961:6;1957:2;1953:15;1949:24;1946:37;1943:57;;;1996:1;1993;1986:12;1943:57;1334:727;;;;-1:-1:-1;;2027:2:28;2019:11;;-1:-1:-1;;;1334:727:28:o;2163:995::-;2400:13;;2382:32;;2470:4;2458:17;;;2452:24;2430:20;;;2423:54;2524:4;2512:17;;;2506:24;-1:-1:-1;;;;;2606:21:28;;;2584:20;;;2577:51;2677:4;2665:17;;;2659:24;2725:21;;2721:30;;2699:20;;;2692:60;;;;2799:25;;;2793:32;2789:41;2783:3;2768:19;;;2761:70;;;;2878:25;;2872:32;2906:8;2868:47;2557:3;2847:19;;2840:76;2953:16;;2947:23;2369:3;2354:19;;;2979:55;3028:4;3013:20;;2947:23;2142:8;2131:20;2119:33;;2066:92;2979:55;-1:-1:-1;3083:3:28;3071:16;;;;3065:23;2142:8;2131:20;3146:4;3131:20;;;;2119:33;2163:995;:::o;3163:422::-;3204:3;3242:5;3236:12;3269:6;3264:3;3257:19;3294:1;3304:162;3318:6;3315:1;3312:13;3304:162;;;3380:4;3436:13;;;3432:22;;3426:29;3408:11;;;3404:20;;3397:59;3333:12;3304:162;;;3308:3;3511:1;3504:4;3495:6;3490:3;3486:16;3482:27;3475:38;3574:4;3567:2;3563:7;3558:2;3550:6;3546:15;3542:29;3537:3;3533:39;3529:50;3522:57;;;3163:422;;;;:::o;3590:458::-;3850:1;3846;3841:3;3837:11;3833:19;3825:6;3821:32;3810:9;3803:51;3890:6;3885:2;3874:9;3870:18;3863:34;3933:6;3928:2;3917:9;3913:18;3906:34;3976:3;3971:2;3960:9;3956:18;3949:31;3784:4;3997:45;4037:3;4026:9;4022:19;4014:6;3997:45;:::i;:::-;3989:53;3590:458;-1:-1:-1;;;;;;3590:458:28:o;5040:184::-;5110:6;5163:2;5151:9;5142:7;5138:23;5134:32;5131:52;;;5179:1;5176;5169:12;5131:52;-1:-1:-1;5202:16:28;;5040:184;-1:-1:-1;5040:184:28:o;6130:219::-;6279:2;6268:9;6261:21;6242:4;6299:44;6339:2;6328:9;6324:18;6316:6;6299:44;:::i;:::-;6291:52;6130:219;-1:-1:-1;;;6130:219:28:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "initFlash((address,address,uint24,uint256,uint256,uint24,uint24))": "2384463b",
+    "swap()": "8119c065",
+    "uniswapV3FlashCallback(uint256,uint256,bytes)": "e9cbafb0"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee1\",\"type\":\"uint24\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"},{\"internalType\":\"uint24\",\"name\":\"fee2\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"fee3\",\"type\":\"uint24\"}],\"internalType\":\"struct Arbitrage.FlashParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"initFlash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"swap\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fee0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"fee1\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"uniswapV3FlashCallback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"initFlash((address,address,uint24,uint256,uint256,uint24,uint24))\":{\"params\":{\"params\":\"The parameters necessary for flash and the callback, passed in as FlashParams\"}},\"uniswapV3FlashCallback(uint256,uint256,bytes)\":{\"details\":\"fails if the flash is not profitable, meaning the amountOut from the flash is less than the amount borrowed\",\"params\":{\"data\":\"The data needed in the callback passed as FlashCallbackData from `initFlash`\",\"fee0\":\"The fee from calling flash for token0\",\"fee1\":\"The fee from calling flash for token1\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"initFlash((address,address,uint24,uint256,uint256,uint24,uint24))\":{\"notice\":\"Calls the pools flash function with data needed in `uniswapV3FlashCallback`\"},\"uniswapV3FlashCallback(uint256,uint256,bytes)\":{\"notice\":\"implements the callback called from flash\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Arbitrage.sol\":\"Arbitrage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":@uniswap/v3-core/=lib/v3-core/\",\":@uniswap/v3-periphery/=lib/v3-periphery/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":v3-core/=lib/v3-core/\",\":v3-periphery/=lib/v3-periphery/contracts/\"]},\"sources\":{\"lib/forge-std/src/console.sol\":{\"keccak256\":\"0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70\",\"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec\"]},\"lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol\":{\"keccak256\":\"0x6ebf1944ab804b8660eb6fc52f9fe84588cee01c2566a69023e59497e7d27f45\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2900536cdadec954ced8789a9d1ed4b5e640029e1424e91fd5b88026486f4d45\",\"dweb:/ipfs/QmUMUX7CuYoiHvFkhifqtXGaciw2wnm4t9sAoPzETZ3Gbq\"]},\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"lib/v3-core/contracts/interfaces/IUniswapV3Pool.sol\":{\"keccak256\":\"0xfe6113d518466cd6652c85b111e01f33eb62157f49ae5ed7d5a3947a2044adb1\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://1c42b9e6f5902ac38dd43e25750939baa7e0c1425dc75afd717c4412731065d5\",\"dweb:/ipfs/QmWaoacnzsucTvBME2o7YgZBZMhaHv7fkj83htHMVWJKWh\"]},\"lib/v3-core/contracts/interfaces/callback/IUniswapV3FlashCallback.sol\":{\"keccak256\":\"0x151ba1777392771025f0fca946c95fbc16ec4b5eff05e1f236115b99bd574de2\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://738a50c25d9d26ca3fabb1865bf6a0cdd8d7a2eec9dbfbd1fc000c81fb8e2b5e\",\"dweb:/ipfs/QmQjgCiLhrq5eLJgQcVHV24MRHyf6YdVzrGH8Ms7LnSSRA\"]},\"lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolActions.sol\":{\"keccak256\":\"0x9453dd0e7442188667d01d9b65de3f1e14e9511ff3e303179a15f6fc267f7634\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://982f4328f956c3e60e67501e759eb292ac487f76460c774c50e9ae4fcc92aae5\",\"dweb:/ipfs/QmRnzEDsaqtd9PJEVcgQi7p5aV5pMSvRUoGZJAdwFUJxgZ\"]},\"lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolDerivedState.sol\":{\"keccak256\":\"0xe603ac5b17ecdee73ba2b27efdf386c257a19c14206e87eee77e2017b742d9e5\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://8febc9bdb399a4d94bb89f5377732652e2400e4a8dee808201ade6848f9004e7\",\"dweb:/ipfs/QmaKDqYYFU4d2W2iN77aDHptfbFmYZRrMYXHeGpJmM8C1c\"]},\"lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolEvents.sol\":{\"keccak256\":\"0x8071514d0fe5d17d6fbd31c191cdfb703031c24e0ece3621d88ab10e871375cd\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://d0b571930cc7488b1d546a7e9cea7c52d8b3c4e207da657ed0e0db7343b8cd03\",\"dweb:/ipfs/QmaGK6vVwB95QSTR1XMYvrh7ivYAYZxi3fD7v6VMA4jZ39\"]},\"lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolImmutables.sol\":{\"keccak256\":\"0xf6e5d2cd1139c4c276bdbc8e1d2b256e456c866a91f1b868da265c6d2685c3f7\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://b99c8c9ae8e27ee6559e5866bea82cbc9ffc8247f8d15b7422a4deb287d4d047\",\"dweb:/ipfs/QmfL8gaqt3ffAnm6nVj5ksuNpLygXuL3xq5VBqrkwC2JJ3\"]},\"lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolOwnerActions.sol\":{\"keccak256\":\"0x759b78a2918af9e99e246dc3af084f654e48ef32bb4e4cb8a966aa3dcaece235\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://64144fb96e1c7fdba87305acadb98a198d26a3d46c097cb3a666e567f6f29735\",\"dweb:/ipfs/QmUnWVwN9FKB9uV5Pr8YfLpWZnYM2DENnRMaadZ492JS9u\"]},\"lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolState.sol\":{\"keccak256\":\"0x852dc1f5df7dcf7f11e7bb3eed79f0cea72ad4b25f6a9d2c35aafb48925fd49f\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://ed63907c38ff36b0e22bc9ffc53e791ea74f0d4f0e7c257fdfb5aaf8825b1f0f\",\"dweb:/ipfs/QmSQrckghEjs6HVsA5GVgpNpZWvTXMY5eQLF7cN6deFeEg\"]},\"lib/v3-periphery/contracts/libraries/PoolAddress.sol\":{\"keccak256\":\"0xce9c4cc46e1f7ac6bf3763abb89926e3939d8a7b62f0cea6a39544628f76f21f\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://b4cc27966e0c1d1f6ad12cf337c39859beb79a8e739776cd8268dacb27579f83\",\"dweb:/ipfs/QmT25E4CoeGMYnnY8zCg9Prf2y29FBhwGqc5xi8mdSuXBK\"]},\"src/Arbitrage.sol\":{\"keccak256\":\"0x52bfb34b34639d7309e3118a57c2d3836e581bd18b912ff7bb17153480f79b10\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://ad4089cab8d49baff23929c039889586e8a7c3e7ba5556b8f39118dc2c2d058f\",\"dweb:/ipfs/QmVCTrwbTDvGYFDt6oQaj8WEVrta2V7Rh2Rk6kJsbAdiBT\"]},\"src/Tokens.sol\":{\"keccak256\":\"0x8d0bdd04c32cacac07128bd9a10bc8833e992ef692afb0a6fcef2a642c40e254\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://2e28308431a53fa55b0d12a03d16d42e7d066d3a122db5c62e24e2c87793de28\",\"dweb:/ipfs/QmfAB2KbfJz5uzTAA2syWN689RyhCt26iywumsakfGNiHv\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct Arbitrage.FlashParams",
+              "name": "params",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token0",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token1",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint24",
+                  "name": "fee1",
+                  "type": "uint24"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint24",
+                  "name": "fee2",
+                  "type": "uint24"
+                },
+                {
+                  "internalType": "uint24",
+                  "name": "fee3",
+                  "type": "uint24"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "initFlash"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "swap"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "fee0",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "fee1",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "uniswapV3FlashCallback"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "initFlash((address,address,uint24,uint256,uint256,uint24,uint24))": {
+            "params": {
+              "params": "The parameters necessary for flash and the callback, passed in as FlashParams"
+            }
+          },
+          "uniswapV3FlashCallback(uint256,uint256,bytes)": {
+            "details": "fails if the flash is not profitable, meaning the amountOut from the flash is less than the amount borrowed",
+            "params": {
+              "data": "The data needed in the callback passed as FlashCallbackData from `initFlash`",
+              "fee0": "The fee from calling flash for token0",
+              "fee1": "The fee from calling flash for token1"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "initFlash((address,address,uint24,uint256,uint256,uint24,uint24))": {
+            "notice": "Calls the pools flash function with data needed in `uniswapV3FlashCallback`"
+          },
+          "uniswapV3FlashCallback(uint256,uint256,bytes)": {
+            "notice": "implements the callback called from flash"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@openzeppelin/openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":@uniswap/v3-core/=lib/v3-core/",
+        ":@uniswap/v3-periphery/=lib/v3-periphery/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":v3-core/=lib/v3-core/",
+        ":v3-periphery/=lib/v3-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/Arbitrage.sol": "Arbitrage"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/forge-std/src/console.sol": {
+        "keccak256": "0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba",
+        "urls": [
+          "bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70",
+          "dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol": {
+        "keccak256": "0x6ebf1944ab804b8660eb6fc52f9fe84588cee01c2566a69023e59497e7d27f45",
+        "urls": [
+          "bzz-raw://2900536cdadec954ced8789a9d1ed4b5e640029e1424e91fd5b88026486f4d45",
+          "dweb:/ipfs/QmUMUX7CuYoiHvFkhifqtXGaciw2wnm4t9sAoPzETZ3Gbq"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "lib/v3-core/contracts/interfaces/IUniswapV3Pool.sol": {
+        "keccak256": "0xfe6113d518466cd6652c85b111e01f33eb62157f49ae5ed7d5a3947a2044adb1",
+        "urls": [
+          "bzz-raw://1c42b9e6f5902ac38dd43e25750939baa7e0c1425dc75afd717c4412731065d5",
+          "dweb:/ipfs/QmWaoacnzsucTvBME2o7YgZBZMhaHv7fkj83htHMVWJKWh"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/v3-core/contracts/interfaces/callback/IUniswapV3FlashCallback.sol": {
+        "keccak256": "0x151ba1777392771025f0fca946c95fbc16ec4b5eff05e1f236115b99bd574de2",
+        "urls": [
+          "bzz-raw://738a50c25d9d26ca3fabb1865bf6a0cdd8d7a2eec9dbfbd1fc000c81fb8e2b5e",
+          "dweb:/ipfs/QmQjgCiLhrq5eLJgQcVHV24MRHyf6YdVzrGH8Ms7LnSSRA"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolActions.sol": {
+        "keccak256": "0x9453dd0e7442188667d01d9b65de3f1e14e9511ff3e303179a15f6fc267f7634",
+        "urls": [
+          "bzz-raw://982f4328f956c3e60e67501e759eb292ac487f76460c774c50e9ae4fcc92aae5",
+          "dweb:/ipfs/QmRnzEDsaqtd9PJEVcgQi7p5aV5pMSvRUoGZJAdwFUJxgZ"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolDerivedState.sol": {
+        "keccak256": "0xe603ac5b17ecdee73ba2b27efdf386c257a19c14206e87eee77e2017b742d9e5",
+        "urls": [
+          "bzz-raw://8febc9bdb399a4d94bb89f5377732652e2400e4a8dee808201ade6848f9004e7",
+          "dweb:/ipfs/QmaKDqYYFU4d2W2iN77aDHptfbFmYZRrMYXHeGpJmM8C1c"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolEvents.sol": {
+        "keccak256": "0x8071514d0fe5d17d6fbd31c191cdfb703031c24e0ece3621d88ab10e871375cd",
+        "urls": [
+          "bzz-raw://d0b571930cc7488b1d546a7e9cea7c52d8b3c4e207da657ed0e0db7343b8cd03",
+          "dweb:/ipfs/QmaGK6vVwB95QSTR1XMYvrh7ivYAYZxi3fD7v6VMA4jZ39"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolImmutables.sol": {
+        "keccak256": "0xf6e5d2cd1139c4c276bdbc8e1d2b256e456c866a91f1b868da265c6d2685c3f7",
+        "urls": [
+          "bzz-raw://b99c8c9ae8e27ee6559e5866bea82cbc9ffc8247f8d15b7422a4deb287d4d047",
+          "dweb:/ipfs/QmfL8gaqt3ffAnm6nVj5ksuNpLygXuL3xq5VBqrkwC2JJ3"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolOwnerActions.sol": {
+        "keccak256": "0x759b78a2918af9e99e246dc3af084f654e48ef32bb4e4cb8a966aa3dcaece235",
+        "urls": [
+          "bzz-raw://64144fb96e1c7fdba87305acadb98a198d26a3d46c097cb3a666e567f6f29735",
+          "dweb:/ipfs/QmUnWVwN9FKB9uV5Pr8YfLpWZnYM2DENnRMaadZ492JS9u"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolState.sol": {
+        "keccak256": "0x852dc1f5df7dcf7f11e7bb3eed79f0cea72ad4b25f6a9d2c35aafb48925fd49f",
+        "urls": [
+          "bzz-raw://ed63907c38ff36b0e22bc9ffc53e791ea74f0d4f0e7c257fdfb5aaf8825b1f0f",
+          "dweb:/ipfs/QmSQrckghEjs6HVsA5GVgpNpZWvTXMY5eQLF7cN6deFeEg"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "lib/v3-periphery/contracts/libraries/PoolAddress.sol": {
+        "keccak256": "0xce9c4cc46e1f7ac6bf3763abb89926e3939d8a7b62f0cea6a39544628f76f21f",
+        "urls": [
+          "bzz-raw://b4cc27966e0c1d1f6ad12cf337c39859beb79a8e739776cd8268dacb27579f83",
+          "dweb:/ipfs/QmT25E4CoeGMYnnY8zCg9Prf2y29FBhwGqc5xi8mdSuXBK"
+        ],
+        "license": "GPL-2.0-or-later"
+      },
+      "src/Arbitrage.sol": {
+        "keccak256": "0x52bfb34b34639d7309e3118a57c2d3836e581bd18b912ff7bb17153480f79b10",
+        "urls": [
+          "bzz-raw://ad4089cab8d49baff23929c039889586e8a7c3e7ba5556b8f39118dc2c2d058f",
+          "dweb:/ipfs/QmVCTrwbTDvGYFDt6oQaj8WEVrta2V7Rh2Rk6kJsbAdiBT"
+        ],
+        "license": "UNLICENSED"
+      },
+      "src/Tokens.sol": {
+        "keccak256": "0x8d0bdd04c32cacac07128bd9a10bc8833e992ef692afb0a6fcef2a642c40e254",
+        "urls": [
+          "bzz-raw://2e28308431a53fa55b0d12a03d16d42e7d066d3a122db5c62e24e2c87793de28",
+          "dweb:/ipfs/QmfAB2KbfJz5uzTAA2syWN689RyhCt26iywumsakfGNiHv"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/Arbitrage.sol",
+    "id": 26285,
+    "exportedSymbols": {
+      "Arbitrage": [
+        26284
+      ],
+      "IERC20": [
+        25556
+      ],
+      "IUniswapV3FlashCallback": [
+        25592
+      ],
+      "IUniswapV3Pool": [
+        25578
+      ],
+      "IUniswapV3PoolActions": [
+        25688
+      ],
+      "IUniswapV3PoolDerivedState": [
+        25719
+      ],
+      "IUniswapV3PoolEvents": [
+        25838
+      ],
+      "IUniswapV3PoolImmutables": [
+        25878
+      ],
+      "IUniswapV3PoolOwnerActions": [
+        25904
+      ],
+      "IUniswapV3PoolState": [
+        26012
+      ],
+      "PoolAddress": [
+        26109
+      ],
+      "console": [
+        17379
+      ],
+      "dai": [
+        26295
+      ],
+      "inch1": [
+        26292
+      ],
+      "uni": [
+        26298
+      ],
+      "uniswapV3Factory": [
+        26120
+      ],
+      "usdc": [
+        26301
+      ],
+      "weth": [
+        26289
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:3380:25",
+    "nodes": [
+      {
+        "id": 26111,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:25",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 26112,
+        "nodeType": "ImportDirective",
+        "src": "65:31:25",
+        "nodes": [],
+        "absolutePath": "lib/forge-std/src/console.sol",
+        "file": "forge-std/console.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26285,
+        "sourceUnit": 17380,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26113,
+        "nodeType": "ImportDirective",
+        "src": "98:78:25",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol",
+        "file": "@openzeppelin/openzeppelin-contracts/contracts/interfaces/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26285,
+        "sourceUnit": 25479,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26114,
+        "nodeType": "ImportDirective",
+        "src": "177:66:25",
+        "nodes": [],
+        "absolutePath": "lib/v3-core/contracts/interfaces/IUniswapV3Pool.sol",
+        "file": "@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26285,
+        "sourceUnit": 25579,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26115,
+        "nodeType": "ImportDirective",
+        "src": "244:84:25",
+        "nodes": [],
+        "absolutePath": "lib/v3-core/contracts/interfaces/callback/IUniswapV3FlashCallback.sol",
+        "file": "@uniswap/v3-core/contracts/interfaces/callback/IUniswapV3FlashCallback.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26285,
+        "sourceUnit": 25593,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26116,
+        "nodeType": "ImportDirective",
+        "src": "329:67:25",
+        "nodes": [],
+        "absolutePath": "lib/v3-periphery/contracts/libraries/PoolAddress.sol",
+        "file": "@uniswap/v3-periphery/contracts/libraries/PoolAddress.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26285,
+        "sourceUnit": 26110,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26117,
+        "nodeType": "ImportDirective",
+        "src": "398:22:25",
+        "nodes": [],
+        "absolutePath": "src/Tokens.sol",
+        "file": "./Tokens.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 26285,
+        "sourceUnit": 26302,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 26120,
+        "nodeType": "VariableDeclaration",
+        "src": "422:78:25",
+        "nodes": [],
+        "constant": true,
+        "mutability": "constant",
+        "name": "uniswapV3Factory",
+        "nameLocation": "439:16:25",
+        "scope": 26285,
+        "stateVariable": false,
+        "storageLocation": "default",
+        "typeDescriptions": {
+          "typeIdentifier": "t_address",
+          "typeString": "address"
+        },
+        "typeName": {
+          "id": 26118,
+          "name": "address",
+          "nodeType": "ElementaryTypeName",
+          "src": "422:7:25",
+          "stateMutability": "nonpayable",
+          "typeDescriptions": {
+            "typeIdentifier": "t_address",
+            "typeString": "address"
+          }
+        },
+        "value": {
+          "hexValue": "307831463938343331633861443938353233363331414534613539663236373334366561333146393834",
+          "id": 26119,
+          "isConstant": false,
+          "isLValue": false,
+          "isPure": true,
+          "kind": "number",
+          "lValueRequested": false,
+          "nodeType": "Literal",
+          "src": "458:42:25",
+          "typeDescriptions": {
+            "typeIdentifier": "t_address",
+            "typeString": "address"
+          },
+          "value": "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+        },
+        "visibility": "internal"
+      },
+      {
+        "id": 26284,
+        "nodeType": "ContractDefinition",
+        "src": "503:2916:25",
+        "nodes": [
+          {
+            "id": 26145,
+            "nodeType": "FunctionDefinition",
+            "src": "556:293:25",
+            "nodes": [],
+            "body": {
+              "id": 26144,
+              "nodeType": "Block",
+              "src": "581:268:25",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    26127
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 26127,
+                      "mutability": "mutable",
+                      "name": "params",
+                      "nameLocation": "610:6:25",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 26144,
+                      "src": "591:25:25",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                        "typeString": "struct Arbitrage.FlashParams"
+                      },
+                      "typeName": {
+                        "id": 26126,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 26125,
+                          "name": "FlashParams",
+                          "nameLocations": [
+                            "591:11:25"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 26220,
+                          "src": "591:11:25"
+                        },
+                        "referencedDeclaration": 26220,
+                        "src": "591:11:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FlashParams_$26220_storage_ptr",
+                          "typeString": "struct Arbitrage.FlashParams"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 26137,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 26129,
+                        "name": "dai",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26295,
+                        "src": "653:3:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 26130,
+                        "name": "usdc",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26301,
+                        "src": "678:4:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "hexValue": "353030",
+                        "id": 26131,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "702:3:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_500_by_1",
+                          "typeString": "int_const 500"
+                        },
+                        "value": "500"
+                      },
+                      {
+                        "hexValue": "3130",
+                        "id": 26132,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "728:2:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10_by_1",
+                          "typeString": "int_const 10"
+                        },
+                        "value": "10"
+                      },
+                      {
+                        "hexValue": "3130",
+                        "id": 26133,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "753:2:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10_by_1",
+                          "typeString": "int_const 10"
+                        },
+                        "value": "10"
+                      },
+                      {
+                        "hexValue": "353030",
+                        "id": 26134,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "775:3:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_500_by_1",
+                          "typeString": "int_const 500"
+                        },
+                        "value": "500"
+                      },
+                      {
+                        "hexValue": "30",
+                        "id": 26135,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "798:1:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_500_by_1",
+                          "typeString": "int_const 500"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_10_by_1",
+                          "typeString": "int_const 10"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_10_by_1",
+                          "typeString": "int_const 10"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_500_by_1",
+                          "typeString": "int_const 500"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "id": 26128,
+                      "name": "FlashParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 26220,
+                      "src": "619:11:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_FlashParams_$26220_storage_ptr_$",
+                        "typeString": "type(struct Arbitrage.FlashParams storage pointer)"
+                      }
+                    },
+                    "id": 26136,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "645:6:25",
+                      "670:6:25",
+                      "696:4:25",
+                      "719:7:25",
+                      "744:7:25",
+                      "769:4:25",
+                      "792:4:25"
+                    ],
+                    "names": [
+                      "token0",
+                      "token1",
+                      "fee1",
+                      "amount0",
+                      "amount1",
+                      "fee2",
+                      "fee3"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "619:191:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                      "typeString": "struct Arbitrage.FlashParams memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "591:219:25"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 26141,
+                        "name": "params",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26127,
+                        "src": "835:6:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                          "typeString": "struct Arbitrage.FlashParams memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                          "typeString": "struct Arbitrage.FlashParams memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26138,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -28,
+                        "src": "820:4:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Arbitrage_$26284",
+                          "typeString": "contract Arbitrage"
+                        }
+                      },
+                      "id": 26140,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "825:9:25",
+                      "memberName": "initFlash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26283,
+                      "src": "820:14:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_struct$_FlashParams_$26220_memory_ptr_$returns$__$",
+                        "typeString": "function (struct Arbitrage.FlashParams memory) external"
+                      }
+                    },
+                    "id": 26142,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "820:22:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26143,
+                  "nodeType": "ExpressionStatement",
+                  "src": "820:22:25"
+                }
+              ]
+            },
+            "functionSelector": "8119c065",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swap",
+            "nameLocation": "565:4:25",
+            "parameters": {
+              "id": 26123,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "569:2:25"
+            },
+            "returnParameters": {
+              "id": 26124,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "581:0:25"
+            },
+            "scope": 26284,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26159,
+            "nodeType": "StructDefinition",
+            "src": "960:192:25",
+            "nodes": [],
+            "canonicalName": "Arbitrage.FlashCallbackData",
+            "members": [
+              {
+                "constant": false,
+                "id": 26147,
+                "mutability": "mutable",
+                "name": "amount0",
+                "nameLocation": "1003:7:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26159,
+                "src": "995:15:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 26146,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "995:7:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26149,
+                "mutability": "mutable",
+                "name": "amount1",
+                "nameLocation": "1028:7:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26159,
+                "src": "1020:15:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 26148,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1020:7:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26151,
+                "mutability": "mutable",
+                "name": "payer",
+                "nameLocation": "1053:5:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26159,
+                "src": "1045:13:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 26150,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1045:7:25",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26154,
+                "mutability": "mutable",
+                "name": "poolKey",
+                "nameLocation": "1088:7:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26159,
+                "src": "1068:27:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_PoolKey_$26025_storage_ptr",
+                  "typeString": "struct PoolAddress.PoolKey"
+                },
+                "typeName": {
+                  "id": 26153,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 26152,
+                    "name": "PoolAddress.PoolKey",
+                    "nameLocations": [
+                      "1068:11:25",
+                      "1080:7:25"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 26025,
+                    "src": "1068:19:25"
+                  },
+                  "referencedDeclaration": 26025,
+                  "src": "1068:19:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PoolKey_$26025_storage_ptr",
+                    "typeString": "struct PoolAddress.PoolKey"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26156,
+                "mutability": "mutable",
+                "name": "poolFee2",
+                "nameLocation": "1112:8:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26159,
+                "src": "1105:15:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 26155,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1105:6:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26158,
+                "mutability": "mutable",
+                "name": "poolFee3",
+                "nameLocation": "1137:8:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26159,
+                "src": "1130:15:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 26157,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1130:6:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "FlashCallbackData",
+            "nameLocation": "967:17:25",
+            "scope": 26284,
+            "visibility": "public"
+          },
+          {
+            "id": 26205,
+            "nodeType": "FunctionDefinition",
+            "src": "1550:289:25",
+            "nodes": [],
+            "body": {
+              "id": 26204,
+              "nodeType": "Block",
+              "src": "1679:160:25",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "63616c6c6261636b",
+                        "id": 26173,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1701:10:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f36184dcb75ec79d828bb67626036a5dbbd9d19f77b5d3b88d62ee40f47129d3",
+                          "typeString": "literal_string \"callback\""
+                        },
+                        "value": "callback"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_f36184dcb75ec79d828bb67626036a5dbbd9d19f77b5d3b88d62ee40f47129d3",
+                          "typeString": "literal_string \"callback\""
+                        }
+                      ],
+                      "expression": {
+                        "id": 26170,
+                        "name": "console",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17379,
+                        "src": "1689:7:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_console_$17379_$",
+                          "typeString": "type(library console)"
+                        }
+                      },
+                      "id": 26172,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1697:3:25",
+                      "memberName": "log",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 9910,
+                      "src": "1689:11:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) view"
+                      }
+                    },
+                    "id": 26174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1689:23:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26175,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1689:23:25"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "id": 26185,
+                                "name": "this",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -28,
+                                "src": "1765:4:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_Arbitrage_$26284",
+                                  "typeString": "contract Arbitrage"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_Arbitrage_$26284",
+                                  "typeString": "contract Arbitrage"
+                                }
+                              ],
+                              "id": 26184,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "1757:7:25",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 26183,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "1757:7:25",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 26186,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1757:13:25",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "expression": {
+                            "arguments": [
+                              {
+                                "id": 26180,
+                                "name": "dai",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 26295,
+                                "src": "1742:3:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "id": 26179,
+                              "name": "IERC20",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 25556,
+                              "src": "1735:6:25",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IERC20_$25556_$",
+                                "typeString": "type(contract IERC20)"
+                              }
+                            },
+                            "id": 26181,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1735:11:25",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IERC20_$25556",
+                              "typeString": "contract IERC20"
+                            }
+                          },
+                          "id": 26182,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "1747:9:25",
+                          "memberName": "balanceOf",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 25513,
+                          "src": "1735:21:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                            "typeString": "function (address) view external returns (uint256)"
+                          }
+                        },
+                        "id": 26187,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1735:36:25",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26176,
+                        "name": "console",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17379,
+                        "src": "1723:7:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_console_$17379_$",
+                          "typeString": "type(library console)"
+                        }
+                      },
+                      "id": 26178,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1731:3:25",
+                      "memberName": "log",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 9896,
+                      "src": "1723:11:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) view"
+                      }
+                    },
+                    "id": 26188,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1723:49:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26189,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1723:49:25"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "id": 26199,
+                                "name": "this",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -28,
+                                "src": "1825:4:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_Arbitrage_$26284",
+                                  "typeString": "contract Arbitrage"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_Arbitrage_$26284",
+                                  "typeString": "contract Arbitrage"
+                                }
+                              ],
+                              "id": 26198,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "1817:7:25",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": {
+                                "id": 26197,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "1817:7:25",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 26200,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1817:13:25",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "expression": {
+                            "arguments": [
+                              {
+                                "id": 26194,
+                                "name": "usdc",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 26301,
+                                "src": "1801:4:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "id": 26193,
+                              "name": "IERC20",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 25556,
+                              "src": "1794:6:25",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IERC20_$25556_$",
+                                "typeString": "type(contract IERC20)"
+                              }
+                            },
+                            "id": 26195,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "nameLocations": [],
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1794:12:25",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IERC20_$25556",
+                              "typeString": "contract IERC20"
+                            }
+                          },
+                          "id": 26196,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "1807:9:25",
+                          "memberName": "balanceOf",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 25513,
+                          "src": "1794:22:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
+                            "typeString": "function (address) view external returns (uint256)"
+                          }
+                        },
+                        "id": 26201,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1794:37:25",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26190,
+                        "name": "console",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17379,
+                        "src": "1782:7:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_console_$17379_$",
+                          "typeString": "type(library console)"
+                        }
+                      },
+                      "id": 26192,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "1790:3:25",
+                      "memberName": "log",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 9896,
+                      "src": "1782:11:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) view"
+                      }
+                    },
+                    "id": 26202,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1782:50:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26203,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1782:50:25"
+                }
+              ]
+            },
+            "baseFunctions": [
+              25591
+            ],
+            "documentation": {
+              "id": 26160,
+              "nodeType": "StructuredDocumentation",
+              "src": "1158:387:25",
+              "text": "@param fee0 The fee from calling flash for token0\n @param fee1 The fee from calling flash for token1\n @param data The data needed in the callback passed as FlashCallbackData from `initFlash`\n @notice implements the callback called from flash\n @dev fails if the flash is not profitable, meaning the amountOut from the flash is less than the amount borrowed"
+            },
+            "functionSelector": "e9cbafb0",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "uniswapV3FlashCallback",
+            "nameLocation": "1559:22:25",
+            "overrides": {
+              "id": 26168,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1670:8:25"
+            },
+            "parameters": {
+              "id": 26167,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26162,
+                  "mutability": "mutable",
+                  "name": "fee0",
+                  "nameLocation": "1599:4:25",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26205,
+                  "src": "1591:12:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26161,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1591:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26164,
+                  "mutability": "mutable",
+                  "name": "fee1",
+                  "nameLocation": "1621:4:25",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26205,
+                  "src": "1613:12:25",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26163,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1613:7:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26166,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "1650:4:25",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26205,
+                  "src": "1635:19:25",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 26165,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1635:5:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1581:79:25"
+            },
+            "returnParameters": {
+              "id": 26169,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1679:0:25"
+            },
+            "scope": 26284,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 26220,
+            "nodeType": "StructDefinition",
+            "src": "2008:187:25",
+            "nodes": [],
+            "canonicalName": "Arbitrage.FlashParams",
+            "members": [
+              {
+                "constant": false,
+                "id": 26207,
+                "mutability": "mutable",
+                "name": "token0",
+                "nameLocation": "2045:6:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26220,
+                "src": "2037:14:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 26206,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2037:7:25",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26209,
+                "mutability": "mutable",
+                "name": "token1",
+                "nameLocation": "2069:6:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26220,
+                "src": "2061:14:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 26208,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2061:7:25",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26211,
+                "mutability": "mutable",
+                "name": "fee1",
+                "nameLocation": "2092:4:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26220,
+                "src": "2085:11:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 26210,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2085:6:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26213,
+                "mutability": "mutable",
+                "name": "amount0",
+                "nameLocation": "2114:7:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26220,
+                "src": "2106:15:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 26212,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2106:7:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26215,
+                "mutability": "mutable",
+                "name": "amount1",
+                "nameLocation": "2139:7:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26220,
+                "src": "2131:15:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 26214,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2131:7:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26217,
+                "mutability": "mutable",
+                "name": "fee2",
+                "nameLocation": "2163:4:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26220,
+                "src": "2156:11:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 26216,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2156:6:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26219,
+                "mutability": "mutable",
+                "name": "fee3",
+                "nameLocation": "2184:4:25",
+                "nodeType": "VariableDeclaration",
+                "scope": 26220,
+                "src": "2177:11:25",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint24",
+                  "typeString": "uint24"
+                },
+                "typeName": {
+                  "id": 26218,
+                  "name": "uint24",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2177:6:25",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "FlashParams",
+            "nameLocation": "2015:11:25",
+            "scope": 26284,
+            "visibility": "public"
+          },
+          {
+            "id": 26283,
+            "nodeType": "FunctionDefinition",
+            "src": "2393:1023:25",
+            "nodes": [],
+            "body": {
+              "id": 26282,
+              "nodeType": "Block",
+              "src": "2448:968:25",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    26231
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 26231,
+                      "mutability": "mutable",
+                      "name": "poolKey",
+                      "nameLocation": "2485:7:25",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 26282,
+                      "src": "2458:34:25",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PoolKey_$26025_memory_ptr",
+                        "typeString": "struct PoolAddress.PoolKey"
+                      },
+                      "typeName": {
+                        "id": 26230,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 26229,
+                          "name": "PoolAddress.PoolKey",
+                          "nameLocations": [
+                            "2458:11:25",
+                            "2470:7:25"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 26025,
+                          "src": "2458:19:25"
+                        },
+                        "referencedDeclaration": 26025,
+                        "src": "2458:19:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_PoolKey_$26025_storage_ptr",
+                          "typeString": "struct PoolAddress.PoolKey"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 26241,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 26234,
+                          "name": "params",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26224,
+                          "src": "2536:6:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                            "typeString": "struct Arbitrage.FlashParams memory"
+                          }
+                        },
+                        "id": 26235,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "2543:6:25",
+                        "memberName": "token0",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26207,
+                        "src": "2536:13:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 26236,
+                          "name": "params",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26224,
+                          "src": "2559:6:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                            "typeString": "struct Arbitrage.FlashParams memory"
+                          }
+                        },
+                        "id": 26237,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "2566:6:25",
+                        "memberName": "token1",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26209,
+                        "src": "2559:13:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 26238,
+                          "name": "params",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26224,
+                          "src": "2579:6:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                            "typeString": "struct Arbitrage.FlashParams memory"
+                          }
+                        },
+                        "id": 26239,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "2586:4:25",
+                        "memberName": "fee1",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26211,
+                        "src": "2579:11:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint24",
+                          "typeString": "uint24"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint24",
+                          "typeString": "uint24"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26232,
+                        "name": "PoolAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26109,
+                        "src": "2507:11:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_PoolAddress_$26109_$",
+                          "typeString": "type(library PoolAddress)"
+                        }
+                      },
+                      "id": 26233,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "2519:7:25",
+                      "memberName": "PoolKey",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 26025,
+                      "src": "2507:19:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_PoolKey_$26025_storage_ptr_$",
+                        "typeString": "type(struct PoolAddress.PoolKey storage pointer)"
+                      }
+                    },
+                    "id": 26240,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [
+                      "2528:6:25",
+                      "2551:6:25",
+                      "2574:3:25"
+                    ],
+                    "names": [
+                      "token0",
+                      "token1",
+                      "fee"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "2507:85:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PoolKey_$26025_memory_ptr",
+                      "typeString": "struct PoolAddress.PoolKey memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2458:134:25"
+                },
+                {
+                  "assignments": [
+                    26244
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 26244,
+                      "mutability": "mutable",
+                      "name": "pool",
+                      "nameLocation": "2617:4:25",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 26282,
+                      "src": "2602:19:25",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IUniswapV3Pool_$25578",
+                        "typeString": "contract IUniswapV3Pool"
+                      },
+                      "typeName": {
+                        "id": 26243,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 26242,
+                          "name": "IUniswapV3Pool",
+                          "nameLocations": [
+                            "2602:14:25"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 25578,
+                          "src": "2602:14:25"
+                        },
+                        "referencedDeclaration": 25578,
+                        "src": "2602:14:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IUniswapV3Pool_$25578",
+                          "typeString": "contract IUniswapV3Pool"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 26252,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 26248,
+                            "name": "uniswapV3Factory",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26120,
+                            "src": "2666:16:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          {
+                            "id": 26249,
+                            "name": "poolKey",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26231,
+                            "src": "2684:7:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_PoolKey_$26025_memory_ptr",
+                              "typeString": "struct PoolAddress.PoolKey memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            {
+                              "typeIdentifier": "t_struct$_PoolKey_$26025_memory_ptr",
+                              "typeString": "struct PoolAddress.PoolKey memory"
+                            }
+                          ],
+                          "expression": {
+                            "id": 26246,
+                            "name": "PoolAddress",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26109,
+                            "src": "2639:11:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_PoolAddress_$26109_$",
+                              "typeString": "type(library PoolAddress)"
+                            }
+                          },
+                          "id": 26247,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "2651:14:25",
+                          "memberName": "computeAddress",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 26108,
+                          "src": "2639:26:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_address_$_t_struct$_PoolKey_$26025_memory_ptr_$returns$_t_address_$",
+                            "typeString": "function (address,struct PoolAddress.PoolKey memory) pure returns (address)"
+                          }
+                        },
+                        "id": 26250,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2639:53:25",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 26245,
+                      "name": "IUniswapV3Pool",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 25578,
+                      "src": "2624:14:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_IUniswapV3Pool_$25578_$",
+                        "typeString": "type(contract IUniswapV3Pool)"
+                      }
+                    },
+                    "id": 26251,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2624:69:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IUniswapV3Pool_$25578",
+                      "typeString": "contract IUniswapV3Pool"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2602:91:25"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 26258,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -28,
+                            "src": "2992:4:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Arbitrage_$26284",
+                              "typeString": "contract Arbitrage"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_Arbitrage_$26284",
+                              "typeString": "contract Arbitrage"
+                            }
+                          ],
+                          "id": 26257,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "2984:7:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 26256,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "2984:7:25",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 26259,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2984:13:25",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 26260,
+                          "name": "params",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26224,
+                          "src": "3011:6:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                            "typeString": "struct Arbitrage.FlashParams memory"
+                          }
+                        },
+                        "id": 26261,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "3018:7:25",
+                        "memberName": "amount0",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26213,
+                        "src": "3011:14:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 26262,
+                          "name": "params",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26224,
+                          "src": "3039:6:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                            "typeString": "struct Arbitrage.FlashParams memory"
+                          }
+                        },
+                        "id": 26263,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "3046:7:25",
+                        "memberName": "amount1",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26215,
+                        "src": "3039:14:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "expression": {
+                                  "id": 26267,
+                                  "name": "params",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 26224,
+                                  "src": "3144:6:25",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                                    "typeString": "struct Arbitrage.FlashParams memory"
+                                  }
+                                },
+                                "id": 26268,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "3151:7:25",
+                                "memberName": "amount0",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 26213,
+                                "src": "3144:14:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              {
+                                "expression": {
+                                  "id": 26269,
+                                  "name": "params",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 26224,
+                                  "src": "3189:6:25",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                                    "typeString": "struct Arbitrage.FlashParams memory"
+                                  }
+                                },
+                                "id": 26270,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "3196:7:25",
+                                "memberName": "amount1",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 26215,
+                                "src": "3189:14:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              {
+                                "expression": {
+                                  "id": 26271,
+                                  "name": "msg",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": -15,
+                                  "src": "3232:3:25",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_message",
+                                    "typeString": "msg"
+                                  }
+                                },
+                                "id": 26272,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "3236:6:25",
+                                "memberName": "sender",
+                                "nodeType": "MemberAccess",
+                                "src": "3232:10:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              },
+                              {
+                                "id": 26273,
+                                "name": "poolKey",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 26231,
+                                "src": "3273:7:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_PoolKey_$26025_memory_ptr",
+                                  "typeString": "struct PoolAddress.PoolKey memory"
+                                }
+                              },
+                              {
+                                "expression": {
+                                  "id": 26274,
+                                  "name": "params",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 26224,
+                                  "src": "3312:6:25",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                                    "typeString": "struct Arbitrage.FlashParams memory"
+                                  }
+                                },
+                                "id": 26275,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "3319:4:25",
+                                "memberName": "fee2",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 26217,
+                                "src": "3312:11:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint24",
+                                  "typeString": "uint24"
+                                }
+                              },
+                              {
+                                "expression": {
+                                  "id": 26276,
+                                  "name": "params",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 26224,
+                                  "src": "3355:6:25",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                                    "typeString": "struct Arbitrage.FlashParams memory"
+                                  }
+                                },
+                                "id": 26277,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberLocation": "3362:4:25",
+                                "memberName": "fee3",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 26219,
+                                "src": "3355:11:25",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint24",
+                                  "typeString": "uint24"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_struct$_PoolKey_$26025_memory_ptr",
+                                  "typeString": "struct PoolAddress.PoolKey memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint24",
+                                  "typeString": "uint24"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint24",
+                                  "typeString": "uint24"
+                                }
+                              ],
+                              "id": 26266,
+                              "name": "FlashCallbackData",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 26159,
+                              "src": "3095:17:25",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_FlashCallbackData_$26159_storage_ptr_$",
+                                "typeString": "type(struct Arbitrage.FlashCallbackData storage pointer)"
+                              }
+                            },
+                            "id": 26278,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "structConstructorCall",
+                            "lValueRequested": false,
+                            "nameLocations": [
+                              "3135:7:25",
+                              "3180:7:25",
+                              "3225:5:25",
+                              "3264:7:25",
+                              "3302:8:25",
+                              "3345:8:25"
+                            ],
+                            "names": [
+                              "amount0",
+                              "amount1",
+                              "payer",
+                              "poolKey",
+                              "poolFee2",
+                              "poolFee3"
+                            ],
+                            "nodeType": "FunctionCall",
+                            "src": "3095:290:25",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_FlashCallbackData_$26159_memory_ptr",
+                              "typeString": "struct Arbitrage.FlashCallbackData memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_struct$_FlashCallbackData_$26159_memory_ptr",
+                              "typeString": "struct Arbitrage.FlashCallbackData memory"
+                            }
+                          ],
+                          "expression": {
+                            "id": 26264,
+                            "name": "abi",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -1,
+                            "src": "3067:3:25",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_abi",
+                              "typeString": "abi"
+                            }
+                          },
+                          "id": 26265,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberLocation": "3071:6:25",
+                          "memberName": "encode",
+                          "nodeType": "MemberAccess",
+                          "src": "3067:10:25",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                            "typeString": "function () pure returns (bytes memory)"
+                          }
+                        },
+                        "id": 26279,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "3067:332:25",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 26253,
+                        "name": "pool",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 26244,
+                        "src": "2960:4:25",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IUniswapV3Pool_$25578",
+                          "typeString": "contract IUniswapV3Pool"
+                        }
+                      },
+                      "id": 26255,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "2965:5:25",
+                      "memberName": "flash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 25681,
+                      "src": "2960:10:25",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
+                        "typeString": "function (address,uint256,uint256,bytes memory) external"
+                      }
+                    },
+                    "id": 26280,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2960:449:25",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26281,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2960:449:25"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 26221,
+              "nodeType": "StructuredDocumentation",
+              "src": "2201:187:25",
+              "text": "@param params The parameters necessary for flash and the callback, passed in as FlashParams\n @notice Calls the pools flash function with data needed in `uniswapV3FlashCallback`"
+            },
+            "functionSelector": "2384463b",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initFlash",
+            "nameLocation": "2402:9:25",
+            "parameters": {
+              "id": 26225,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26224,
+                  "mutability": "mutable",
+                  "name": "params",
+                  "nameLocation": "2431:6:25",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 26283,
+                  "src": "2412:25:25",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FlashParams_$26220_memory_ptr",
+                    "typeString": "struct Arbitrage.FlashParams"
+                  },
+                  "typeName": {
+                    "id": 26223,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 26222,
+                      "name": "FlashParams",
+                      "nameLocations": [
+                        "2412:11:25"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 26220,
+                      "src": "2412:11:25"
+                    },
+                    "referencedDeclaration": 26220,
+                    "src": "2412:11:25",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FlashParams_$26220_storage_ptr",
+                      "typeString": "struct Arbitrage.FlashParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2411:27:25"
+            },
+            "returnParameters": {
+              "id": 26226,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2448:0:25"
+            },
+            "scope": 26284,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 26121,
+              "name": "IUniswapV3FlashCallback",
+              "nameLocations": [
+                "525:23:25"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 25592,
+              "src": "525:23:25"
+            },
+            "id": 26122,
+            "nodeType": "InheritanceSpecifier",
+            "src": "525:23:25"
+          }
+        ],
+        "canonicalName": "Arbitrage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          26284,
+          25592
+        ],
+        "name": "Arbitrage",
+        "nameLocation": "512:9:25",
+        "scope": 26285,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 25
+}

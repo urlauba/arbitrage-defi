@@ -1,5 +1,12 @@
-[submodule "solidity/lib/forge-std"]
-	path = solidity/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
-[submodule "lib/forge-std"]
-	branch = v1.2.0
+[submodule "lib/v3-periphery"]
+	path = lib/v3-periphery
+	url = https://github.com/uniswap/v3-periphery
+	branch = v1.3.0
+[submodule "/Users/urlauba/arbitrage-defi/lib/v3-periphery"]
+	branch = v1.3.0
+[submodule "solidity/lib/v3-periphery"]
+	path = solidity/lib/v3-periphery
+	url = https://github.com/uniswap/v3-periphery
+[submodule "solidity/lib/openzeppelin-contracts"]
+	path = solidity/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
