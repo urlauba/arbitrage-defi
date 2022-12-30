@@ -4,6 +4,8 @@ pragma solidity =0.8.17;
 import "forge-std/console.sol";
 
 import "@openzeppelin/openzeppelin-contracts/contracts/interfaces/IERC20.sol";
+import "@sushiswap/protocols/sushiswap/contracts/interfaces/IUniswapV2Router02.sol";
+import "@sushiswap/protocols/sushiswap/contracts/libraries/UniswapV2Library.sol";
 import "@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol";
 import "@uniswap/v3-core/contracts/interfaces/callback/IUniswapV3FlashCallback.sol";
 import "@uniswap/v3-periphery/contracts/libraries/PoolAddress.sol";
@@ -11,20 +13,37 @@ import "@uniswap/v3-periphery/contracts/libraries/PoolAddress.sol";
 import "./Tokens.sol";
 
 address constant uniswapV3Factory = 0x1F98431c8aD98523631AE4a59f267346ea31F984;
+address constant sushiSwapV2Factory = 0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac;
+address constant sushiSwapRouter = 0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F;
 
 contract Arbitrage is IUniswapV3FlashCallback {
 
+    // costs = loan_fee + swap_fee_one + swap_fee_two + gas
+
+    // DAI/USDC on A is 10
+    // DAI/USDC on B is 11
+    // 1. Borrow X DAI/USDC -> ex. 100 DAI
+    // 2. Sell X DAI/USDC on B -> ex. 1100 USDC
+    // 3. Buy X "   " on A -> ex. 100 DAI and 100 USDC
+    // 4. Payback loan
     function swap() external {
+        console.log("hi");
+
         FlashParams memory params = FlashParams({
-            token0: dai,
-            token1: usdc,
+            token0: uni,
+            token1: dai,
             fee1: 500,
             amount0: 10,
-            amount1: 10,
-            fee2: 500,
+            amount1: 0,
+            fee2: 0,
             fee3: 0
         });
         this.initFlash(params);
+
+        console.log("bye");
+
+        console.log(IERC20(uni).balanceOf(address(this)));
+        console.log(IERC20(dai).balanceOf(address(this)));
     }
 
         // fee2 and fee3 are the two other fees associated with the two other pools of token0 and token1
@@ -47,10 +66,38 @@ contract Arbitrage is IUniswapV3FlashCallback {
         uint256 fee1,
         bytes calldata data
     ) external override {
-        console.log("callback");
+        console.log("callback!");
 
+        address[] memory path = new address[](2);
+        path[0] = uni;
+        path[1] = dai;
+
+        console.log(IERC20(uni).balanceOf(address(this)));
         console.log(IERC20(dai).balanceOf(address(this)));
-        console.log(IERC20(usdc).balanceOf(address(this)));
+
+        IUniswapV2Router02 sushiRouter = IUniswapV2Router02(sushiSwapRouter);
+        IERC20(uni).approve(address(sushiRouter), 1);
+
+        uint256 amountRequired = UniswapV2Library.getAmountsIn(
+            sushiSwapV2Factory,
+            1,
+            path
+        )[0];
+
+        console.log(amountRequired);
+
+        // INSUFFICIENT_OUTPUT_AMOUNT
+        // TRANSFER_FROM_FAILED
+        sushiRouter.swapExactTokensForTokensSupportingFeeOnTransferTokens(
+            1,
+            0,//amountRequired, // need to know conversion
+            path,
+            address(this),
+            block.timestamp + 10 days // need to change
+        );
+
+        console.log(IERC20(uni).balanceOf(address(this)));
+        console.log(IERC20(dai).balanceOf(address(this)));
     }
 
     //fee1 is the fee of the pool from the initial borrow

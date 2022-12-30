@@ -1,12 +1,6 @@
-[submodule "lib/v3-periphery"]
-	path = lib/v3-periphery
-	url = https://github.com/uniswap/v3-periphery
-	branch = v1.3.0
-[submodule "/Users/urlauba/arbitrage-defi/lib/v3-periphery"]
-	branch = v1.3.0
-[submodule "solidity/lib/v3-periphery"]
-	path = solidity/lib/v3-periphery
-	url = https://github.com/uniswap/v3-periphery
-[submodule "solidity/lib/openzeppelin-contracts"]
-	path = solidity/lib/openzeppelin-contracts
-	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "solidity/lib/trident"]
+	path = solidity/lib/trident
+	url = https://github.com/sushiswap/trident
+[submodule "solidity/lib/sushiswap"]
+	path = solidity/lib/sushiswap
+	url = https://github.com/sushiswap/sushiswap
